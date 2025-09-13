@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Data Types</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      color: #333;
+      padding: 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      text-align: center;
+      color: #222;
+    }
+    .output {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: 20px auto;
+      font-family: "Courier New", monospace;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+
+<h1>JavaScript Data Types</h1>
+<div class="output" id="output"></div>
+
+<script>
+  // Function to print to the page
+  function print(msg) {
+    document.getElementById("output").innerHTML += msg + "\n";
+  }
+
+  // STRING
+  let color = "Yellow";
+  let lastName = 'Johnson';
+  print("String: " + color + " | typeof: " + typeof color);
+
+  // NUMBER
+  let length = 16;
+  let weight = 7.5;
+  print("Number: " + length + " | typeof: " + typeof length);
+  print("Number: " + weight + " | typeof: " + typeof weight);
+
+  // BIGINT
+  let big1 = 1234567890123456789012345n;
+  let big2 = BigInt(1234567890123456789012345);
+  print("BigInt: " + big1 + " | typeof: " + typeof big1);
+  print("BigInt: " + big2 + " | typeof: " + typeof big2);
+
+  // BOOLEAN
+  let isOnline = true;
+  let isComplete = false;
+  print("Boolean: " + isOnline + " | typeof: " + typeof isOnline);
+  print("Boolean: " + isComplete + " | typeof: " + typeof isComplete);
+
+  // OBJECT
+  const person = { firstName: "John", lastName: "Doe" };
+  print("Object: " + JSON.stringify(person) + " | typeof: " + typeof person);
+
+  // ARRAY
+  const cars = ["Saab", "Volvo", "BMW"];
+  print("Array: " + cars + " | typeof: " + typeof cars);
+
+  // DATE
+  const date = new Date("2022-03-25");
+  print("Date: " + date + " | typeof: " + typeof date);
+
+  // UNDEFINED
+  let x;
+  print("Undefined: " + x + " | typeof: " + typeof x);
+
+  // NULL
+  let y = null;
+  print("Null: " + y + " | typeof: " + typeof y);
+
+  // SYMBOL
+  const sym1 = Symbol();
+  const sym2 = Symbol("desc");
+  print("Symbol: " + sym1.toString() + " | typeof: " + typeof sym1);
+  print("Symbol with description: " + sym2.toString() + " | typeof: " + typeof sym2);
+
+  // EXTRA: NUMBERS
+  let x1 = 34.00;
+  let x2 = 34;
+  let exp1 = 123e5;
+  let exp2 = 123e-5;
+  print("Number with decimals: " + x1);
+  print("Number without decimals: " + x2);
+  print("Exponential Notation 123e5: " + exp1);
+  print("Exponential Notation 123e-5: " + exp2);
+
+  // TYPEOF QUICK EXAMPLES
+  print("typeof 'John Doe': " + typeof "John Doe");
+  print("typeof 3.14: " + typeof 3.14);
+  print("typeof true: " + typeof true);
+  print("typeof {}: " + typeof {});
+  print("typeof []: " + typeof []);
+  print("typeof undefined: " + typeof undefined);
+  print("typeof null: " + typeof null); // JS quirk
+  print("typeof Symbol(): " + typeof Symbol());
+</script>
+
+</body>
+</html>
